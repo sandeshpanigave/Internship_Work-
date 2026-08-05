@@ -1,0 +1,14 @@
+def employee():
+    salary=int(input("Enter Basic salary:"))
+    hra=int(input("Enter HRA:"))
+    da=int(input("Enter DA:"))
+    pf=int(input("Enter PF:"))
+    tax=int(input("Enter Tax:"))
+    gross=salary+hra+da
+    dead=pf+tax
+    net=gross-dead
+    print("Gross salary:",gross)
+    print("Deduction:",dead)
+    print("Net salary:",net)
+    return gross,dead,net 
+employee()
