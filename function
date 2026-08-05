@@ -1,0 +1,3 @@
+def sandesh(name):
+    print("welcome to python programming:", name) 
+sandesh(sandy)
