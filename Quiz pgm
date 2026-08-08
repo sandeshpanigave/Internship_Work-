@@ -1,0 +1,62 @@
+def ask_question(question,correct_answer,option=None):
+    print(question)
+    if option:
+        for opt in option:
+            print(opt)
+    answer=input("your answer:").strip().lower()
+    if answer==correct_answer.lower():
+        print("Correct!\n")
+        return True
+    else:
+        print(f"wrong!the correct answer was:{correct_answer}\n")
+        return False    
+def main():
+    print("="*40)
+    print("WELCOME TO THE PYTHON QUIZ")
+    print("="*40)
+    score=0
+    total_question=5
+    if ask_question(
+        "Q1.Which keyword is used to define a function in python?",
+        "def",
+        ["a)func","b)def","c)function","d)define"]
+    ):
+        score+=1
+    if ask_question(
+        "Q2.What is the output of 3+2*2?",
+        "7",
+        ["a)10","b)7","c)12","d)8"]
+    ):
+        score+=1
+    if ask_question(
+        "Q3.Which loop is used when the number of itreation is known?",
+        "for",
+        ["a)while","b)for","c)do","d)switch"]
+    ):
+        score+=1
+    if ask_question(
+        "Q4.Which module is used to generate random numbers in python?",
+        "random",
+        ["a)math","b)random","c)statistics","d)numpy"]
+    ):
+        score+=1
+    if ask_question(
+        "Q5.What data type is the result of 10/2 in python 3?",
+        "float",
+        ["a)int","b)float","c)str","d)bool"]
+    ):
+        score+=1
+    print("="*40)
+    print(f"Quiz Over!you scored{score} out of {total_question}")
+    percentage=(score/total_question)*100
+    if percentage==100:
+        print("Perfect score!Excellent work!")
+    elif percentage>=80:
+        print("Great job!")
+    elif percentage>=50:
+        print("Good effort!keep practicing!")
+    else:
+        print("needs improvement.try again!")
+    print("="*40)
+if __name__ =="__main__":
+    main()
