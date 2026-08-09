@@ -60,3 +60,49 @@ deposit()
 withdraw()
 get_balance()
 show_transaction_history()
+
+
+
+===E-commerce billing system===
+
+def calculate_total(price,quantity):
+    return price*quantity
+
+def calculate_discount(total):
+    discount=total* 0.1
+    return discount
+
+def calculate_gst(amount):
+    gst=amount*0.18
+    return gst
+
+def calculate_shipping(amount):
+    if amount>=500:
+        return 0
+    return 50
+
+def generate_invoice():
+    price=float(input("Enter price: "))
+    quantity=int(input("Enter quantity: "))
+
+    total=calculate_total(price,quantity)
+    discount=calculate_discount(total)
+    amount=total-discount
+    gst=calculate_gst(amount)
+    shipping=calculate_shipping(amount)
+
+    final=amount+gst+shipping
+
+    print("\n--- INVOICE ---")
+    print("Item Total:",total)
+    print("Discount:",discount)
+    print("After Discount:",amount)
+    print("GST:",gst)
+    print("Shipping:",shipping)
+    print("Final Amount:",final)
+generate_invoice()
+
+
+===
+
+
