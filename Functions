@@ -103,6 +103,53 @@ def generate_invoice():
 generate_invoice()
 
 
-===
+=====Student Result Processing=====
+
+def calculate_total():
+    a=int(input("Enter The Kannada Marks:"))
+    b=int(input("Enter The English Marks:"))
+    c=int(input("Enter The Hindi Marks:"))
+    total=a+b+c
+    return total
+def calculate_percentage(total):
+    percentage=(total/300)*100
+    print(percentage)
+    return percentage
+
+def get_grade(percentage):
+    if percentage>=90:
+        return "Grade A"
+    elif percentage>=80:
+        return "Grade B"
+    elif percentage>=50:
+        return "Grade C"
+    else:
+        return "Grade BLNT"
+
+def pass_fail(percentage):
+    if percentage>=35:
+        return "Pass"
+    else:
+        return "Fail"
+    
+def calculate_rank(percentage):
+    if percentage>=80:
+        return "Distinction"
+    elif percentage>=60:
+        return "Average"
+    else:
+        return "Fail"
+    
+total=calculate_total()
+percen=calculate_percentage(total)
+grade=get_grade(percen)
+status=pass_fail(percen)
+rank=calculate_rank(percen)
+
+print("Total:",total)
+print("Percentage:",percen)
+print("Grade:",grade)
+print("PASS FAIL:",status)
+print("Rank:",rank)
 
 
