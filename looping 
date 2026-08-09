@@ -1,0 +1,62 @@
+#Library Book Entry
+total=0
+while True:
+    book=int(input("Enter the number of books:"))
+    if book==0:
+        break
+    total=total+book
+print("total number of books:",total)library
+
+
+
+#Petrol Pump Seles
+total=0
+coust=0
+while True:
+    amount=int(input("Enter the number of Coustomer:"))
+    if amount==0:
+        break
+    total=total+amount
+    coust = coust + 1
+print("Total number of coustomer:",coust)
+print("Total collection:",total)
+
+
+#Hospital Patient Checkup
+count=0
+for i in range(10):
+    temp=int(input("Enter the temparature of patient:"))
+    if temp>=100:
+        count=count+1
+print("number of fever patients:",count) 
+
+
+#Stdent Present Absent Status
+
+present=0
+absent=0
+
+for i in range(5):
+    attendence=int(input("Enter the Attendence:"))
+    if attendence==1:
+        present+=1
+    elif attendence==0:
+        absent+=1
+    else:
+        print("Invalid optins plese enter the 0 or 1")
+print("Present studentd:",present)
+print("Absent studentd:",absent)
+
+
+#Restorent Order System
+
+total=0
+item=0
+while True:
+    price=int(input("Enter the Item Price:"))
+    if price==-1:
+        break
+    item+=1
+    total = total + price
+print("Total numbers of Item:",item)
+print("Total Price Collection:",total)                                                         
