@@ -1,0 +1,35 @@
+products={}
+def add_product():
+    name=input("Enter the product name:")
+    price=int(input("Enter the Product Price:"))
+    stock=int(input("Enter the stock:"))
+    products[name]=stock
+    print("Product Added:")
+    
+def update_stock():
+    name=input("Enter Updating Stock:")
+    if name in products:
+        stock=int(input("Stock Add:"))
+        products[name]=products[name]+stock
+        print("Stock updated:")
+    else:
+        print("Product not found:")
+        
+def search_product():
+    name=input("Enter Serching Product:")
+    if name in products:
+        print("Product:",name)
+        print("Stock:",products[name])
+    else:
+        print("Product not found")
+    
+
+def low_stock(threshold):
+    for name in products:
+        if products[name]<=threshold:
+            print("Low stock",name)
+    
+add_product()
+update_stock()
+search_product()
+low_stock(5)
