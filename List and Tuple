@@ -18,3 +18,17 @@ grocery_list.append("Milk")
 grocery_list.insert(1,"Honey")
 grocery_list.remove("Dal")
 print("The Final Grocery List:",grocery_list)
+
+
+=====Shopping Cart=====
+
+cart=[20,30,50,60,80,90]
+print("Total Product :",cart)
+print("Maximu Cart Value:",max(cart))
+print("Total Cart Value:",sum(cart))
+remove=int(input("Enter the Removing Cart:"))
+if remove in cart:
+    cart.remove(remove)
+    print("Cart Updated:",cart)
+else:
+    print("Cart value not found:")
