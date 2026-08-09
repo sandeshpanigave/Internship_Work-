@@ -59,4 +59,19 @@ while True:
     item+=1
     total = total + price
 print("Total numbers of Item:",item)
-print("Total Price Collection:",total)                                                         
+print("Total Price Collection:",total) 
+ 
+
+# Password Login   
+password="san"
+attempt=1
+while attempt<=3:
+    password=input("Enter Password:")
+    if password=="sss":
+        print("Login")
+        break
+    else:
+        attempt=attempt+1
+if attempt>3:
+    print("lock")
+                                                  
