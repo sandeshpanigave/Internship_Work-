@@ -12,3 +12,16 @@ avg=sum(marks)/len(marks)
 print("Highest marks:",high_marks)
 print("Lowest marks:",low_marks)
 print("Average marks:",avg)
+
+
+
+====Grocery Shopping List====
+
+grocery_list=["Rice","Dal","Sugar","Salt","Curd"]
+print(grocery_list)
+
+grocery_list.append("Milk")
+grocery_list.insert(1,"Honey")
+grocery_list.remove("Dal")
+
+print("The Final Grocery List:",grocery_list)
