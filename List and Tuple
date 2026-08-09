@@ -1,0 +1,14 @@
+===Student Marks List===
+
+
+marks=[80,60,90,40,50]
+print("All Student Marks:",marks)
+
+high_marks=max(marks)
+low_marks=min(marks)
+
+avg=sum(marks)/len(marks)
+
+print("Highest marks:",high_marks)
+print("Lowest marks:",low_marks)
+print("Average marks:",avg)
