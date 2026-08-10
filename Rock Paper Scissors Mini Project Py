@@ -1,0 +1,53 @@
+import random
+def get_computer_choice():
+    choices=["rock","paper","scissors"]
+    return random.choice(choices)
+def decide_winner(user,computer):
+    if user==computer:
+        return "tie"
+    elif (
+        (user=="rock" and computer=="scissors") or
+        (user=="paper" and computer=="rock")or
+        (user=="scissors" and computer=="paper")
+    ):
+         return "user"
+    else:
+         return "computer"
+def main():
+    print("="*40)
+    print("   rock-paper-scissors")
+    print("=" *40)
+    print("type 'quit' at any time to exit.\n")
+    user_score=0
+    computer_score=0
+    while True:
+        user_choice=input("enter rock,paper,or scissors:").strip().lower()
+        if user_choice=="quit":
+            break
+        if user_choice not in ["rock","paper","scissors"]:
+            print("invalid choice.please try again.\n")
+            continue
+        computer_choice=get_computer_choice()
+        print(f"computer chose:{computer_choice}")
+        result=decide_winner(user_choice,computer_choice)
+        if result=="tie":
+            print("it's a tie!\n")
+        elif result=="user":
+            print("you win this round!\n")
+            user_score+=1
+        else:
+            print("computer wins this round!\n")
+            computer_score+=1
+        print(f"score->you:you:{user_score} computer:{computer_score}\n")
+        print("="*40)
+        print("final score")
+        print(f"you:{user_score} computer:{computer_score}")
+        if user_score>computer_score:
+            print("congratulations,you won overall!")
+        elif user_score<computer_score:
+            print("computer won overall.better luck next time!")
+        else:
+            print("overall it's a tie!")
+        print("="*40)
+if __name__=="__main__":
+    main()
