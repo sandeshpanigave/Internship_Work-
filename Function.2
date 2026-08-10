@@ -1,0 +1,34 @@
+====Hospital Appointment Schedule====
+
+def book_appointment():
+    name=input("Enter the Patient Name:")
+    number=int(input("Enter The Patient Number:"))
+    time=int(input("Enter Timing Of Hospital:"))
+    print("Appointment Success")
+    
+def cancel_appointment():
+    cancel=int(input("Enter The Cancel appontment:"))
+    if cancel==1:
+        print("Accept")
+    elif cancel==0:
+        print("Reject")
+    else:
+        print("Invalid")
+    
+def check_availability():
+    available=int(input("Enter the Hospital Availability Timing:"))
+    if available<=22 and available>=5:
+        print("Hospital open or Availabele:")
+    else:
+        print("Not Available:")
+        
+def view_schedule(name,doctor,time):
+    print("Patient:", name)
+    print("Doctor:", doctor)
+    print("Time:", time)  
+    return name,doctor,time
+
+book_appointment()
+cancel_appointment()
+check_availability()
+view_schedule("Sandesh","Dr san","10 AM")
