@@ -1,4 +1,4 @@
-===Student Marks List===
+8===Student Marks List===
 
 marks=[80,60,90,40,50]
 print("All Student Marks:",marks)
@@ -49,5 +49,18 @@ print("Average Salary:", average)
 for i in emp_salary: 
     if i>=30000:
         n=n+1
-print("Employees Salary >= 30000:",i) 
+print("Employees Salary >= 30000:",i)
+
+
+
+====Mobile Recharge List==== 
+
+recharge_list=[350,200,299,400,900,299]
+print("Display All Amounts:",recharge_list) 
+print("Total Collection:",sum(recharge_list))
+print("Highest Recharge Amount:", max(recharge_list))
+recharge_list.append(399)
+count=recharge_list.count(299)
+print("How Many Times Recharge Repeat:",count)
+print("Final Modified List:", recharge_list)
         
