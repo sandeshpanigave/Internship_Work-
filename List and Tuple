@@ -32,3 +32,22 @@ if remove in cart:
     print("Cart Updated:",cart)
 else:
     print("Cart value not found:")
+
+
+
+=====Employee Salary Analysis====
+
+n=0
+emp_salary=[10000,20000,30000,40000]
+print("Employee Salary:", emp_salary)
+Maximum=max(emp_salary)
+Minimum=min(emp_salary)
+average=sum(emp_salary)/4
+print("Maximum Salary:", Maximum)
+print("Minimum Salary:", Minimum)
+print("Average Salary:", average)
+for i in emp_salary: 
+    if i>=30000:
+        n=n+1
+print("Employees Salary >= 30000:",i) 
+        
