@@ -32,3 +32,56 @@ book_appointment()
 cancel_appointment()
 check_availability()
 view_schedule("Sandesh","Dr san","10 AM")
+
+
+
+
+
+=====Online Food Ordering System=====
+
+def calculate_order_total():
+    total = 0
+    while True:
+        order = int(input("Enter the orders: "))
+        if order == 0:
+            break
+        total = total + order
+    return total
+
+def apply_coupon(total):
+    coupon=0
+    if total>=1000:
+        coupon=100
+    elif total>=500:
+        coupon=50
+    elif total>=200:
+        coupon=10
+    else:
+        print("No Coupon")
+
+    total= total- coupon
+    return total, coupon
+
+def delivery_charge(total):
+    if total<=500:
+        charge=50
+    else:
+        charge=0
+    return charge
+
+def generate_bill(total, coupon, charge):
+    final=total+charge
+
+    print("=" * 40)
+    print("GENERATE BILL")
+    print("=" * 40)
+    print("Total Orders     :", total+coupon)
+    print("Coupon Applied   :", coupon)
+    print("Delivery Charge  :", charge)
+    print("Final Charge     :", final)
+    print("=" * 40)
+
+total=calculate_order_total()
+total,coupon=apply_coupon(total)
+charge=delivery_charge(total)
+generate_bill(total, coupon, charge)
