@@ -1,0 +1,5 @@
+HR=["1.Ravi Kumar","2.Sandesh","3.Mounesh","4.Ramu kumar","5.Ganesh","6.Sudesh"]
+i=0
+for iname in HR:
+    print(HR[i])
+    i=i+1
