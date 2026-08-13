@@ -1,0 +1,6 @@
+emp_id=[100,200,222,100,333,222,100]
+unique_list=set(emp_id)
+print(len(emp_id))
+print(len(unique_list))
+print(" Employee Id: ",emp_id)
+print(" Unique List",unique_list)
