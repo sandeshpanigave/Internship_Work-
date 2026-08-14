@@ -72,4 +72,16 @@ else:
 
 
 
-            
+
+=====Build a simple electricity bill calculator with different rates for different unit slabs (e.g., 0-100, 101-300, 301+).====
+
+Unit=int(input("Enter The Electricity Bill Unit:"))
+if Unit>=100:
+    Bill=Unit*2
+elif Unit>=300:
+    Bill=Unit*3
+elif Unit>=500:
+    Bill=Unit*5
+else: 
+    Bill=Unit*1
+print("Electricity Bill:",Bill)            
