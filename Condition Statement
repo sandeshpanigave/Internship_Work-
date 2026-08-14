@@ -1,0 +1,23 @@
+====Write a program to check whether a number is positive, negative, or zero====
+
+num=int(input("Enter The Number:"))
+if num>0:
+    print("Positive:")
+elif num<0:
+    print("Negative:")
+else:
+    print("Zero:")
+
+
+
+=====Build a simple grading system: take marks as input and print the grade (A/B/C/D/F) using if-elif-else=====
+
+marks=int(input("Enter Student Marks:"))
+if marks>=90:
+    print("Grade:A")
+elif marks>=80:
+    print("Grade:B")
+elif marks>=60:
+    print("Grade:C")
+else:
+    print("Grade:D")
