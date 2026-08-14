@@ -34,3 +34,18 @@ if year%4==0 and year%100==0:
         print("Not A Leaf Year")
 else: 
     print("Leaf Year")
+
+
+
+=====Write a program that takes three numbers and prints the largest among them without using max().=====
+
+a=int(input("enter a:"))
+b=int(input("enter b:"))
+c=int(input("enter c:"))
+
+if a>=b and a>=c:
+    print ("A Is Largest:",a)
+elif b>=a and b>=c:
+    print("B Is Largest:",b)
+else:
+    print("C Is Largest:",c)
