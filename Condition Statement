@@ -49,3 +49,27 @@ elif b>=a and b>=c:
     print("B Is Largest:",b)
 else:
     print("C Is Largest:",c)
+
+
+
+
+=====Build a basic login validator: check a hardcoded username and password, and print appropriate messages for correct, 
+wrong password, or wrong username.=====
+
+username = "Sandesh"
+password = "102"
+
+username = input("Enter Username: ")
+password = input("Enter Password: ")
+
+if username == "Sandesh" and password == "102":
+    print("Welcome Sandy!")
+elif username == "Sandesh":
+    print("Wrong password!")
+else:
+    print("Wrong username!")
+
+
+
+
+            
