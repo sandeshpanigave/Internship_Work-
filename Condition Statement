@@ -21,3 +21,16 @@ elif marks>=60:
     print("Grade:C")
 else:
     print("Grade:D")
+
+
+
+====Write a program to check whether a given year is a leap year.====
+
+year=int(input("Entry The Year:"))
+if year%4==0 and year%100==0:
+    if year%400==0:
+        print("Leaf Year")
+    else:
+        print("Not A Leaf Year")
+else: 
+    print("Leaf Year")
