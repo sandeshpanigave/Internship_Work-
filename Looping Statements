@@ -1,0 +1,56 @@
+num=int(input("Enter The Natural Number:"))
+sum=0
+for i in range(1,num+1): 
+    print(i)
+    sum=sum+i
+print("Sum Of Natural Number:",sum)
+
+
+
+n=int(input("Enter The Number:"))
+i=1
+while i<=10:
+    print(n*i)
+    i=i+1
+print("Multiplication Table Is Created:")
+
+
+num=int(input("Enter The Number:"))
+count=0
+for i in range(1,num+1):
+    if num%i==0:
+        count=count+1
+if count==2:
+    print("Prime Number:")
+else: 
+    print("Not Prime:")
+
+
+
+num=int(input("Enter The Number :"))
+a=0
+b=1
+for i in range(num):
+    print(a) 
+    a=a+b
+    b=a-b
+
+
+
+for a in range(1, 6):
+    for b in range(a):
+        print("*", end=" ")
+    print()
+
+
+
+Number=[10,-40,30,-60,50,70,102]
+Target=50
+for num in Number: 
+    if num<0:
+        continue 
+    print(num)
+    
+    if num == Target:
+        print("Target Found:")
+        break
