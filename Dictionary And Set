@@ -1,0 +1,94 @@
+
+=====Create a dictionary of at least 6 students with their marks, and write a program to add, update, and delete an entry.=====
+ student={"sandesh":84,"sandy":77,"san":66,"mikasa":100,"msg":99}
+print(student)
+student["mounesh"]="100"
+print("Adding The new Stusents:",student)
+student["san"]=100
+print("Updated student data:",student)
+del student["sandesh"]
+print("Deleted Student Data:",student)
+
+
+
+=====Write a program to find the student with the highest and lowest marks from the dictionary using loops.=====
+
+student={
+    "sandesh":66,
+    "Sandy":88,
+    "san":99,
+    "Mikasa":100,
+    "msg":89}
+high_mark=student.values()    
+high_name=student.keys()
+print("Highest Name:",sorted(high_name))
+print("Highest Marks:",max(high_mark))
+
+
+
+=====Take a sentence as input and use a dictionary to count the frequency of each word.=====
+
+sentence= input("Enter a sentence:")
+words=sentence.split()
+frequency={}
+
+for word in words:
+    if word in frequency:
+        frequency[word] += 1
+    else:
+        frequency[word] = 1
+
+print("Word frequency:")
+print(frequency)
+
+
+
+=====Create two sets of numbers and demonstrate union, intersection, difference, and symmetric difference operations.=====
+
+san1={10,20,25,15,44}
+san2={30,50,20,44,10}
+print("Union:", san1 | san2)
+print("Intersection:", san1 & san2)
+print("Difference:", san1 - san2)
+print("Symmetric Difference:", san1 ^ san2)
+
+
+
+=====Write a program to remove duplicate elements from a list using a set, and compare the result with Task 4's duplicate-removal program.=====
+
+my_list=[10,20,10,30,20,40,30]
+new_list = list(set(my_list))
+print("Original list:",my_list)
+print("After removing duplicates:",new_list)
+
+
+
+
+======Mini Challenge: Build a simple 'Student Result Management' program that stores student names and marks in a 
+dictionary, uses conditional statements to assign grades, and uses a loop to display a formatted result card for every 
+student.=====
+
+students = {
+    "Sandesh": 85,
+    "Mounesh": 100,
+    "Siddu": 58,
+    "Mikasa": 99
+}
+print("===== STUDENT RESULT =====")
+for name, marks in students.items():
+
+    if marks >= 80:
+        grade = "A"
+    elif marks >= 60:
+        grade = "B"
+    elif marks >= 50:
+        grade = "C"
+    elif marks >= 35:
+        grade = "D"
+    else:
+        grade = "F"
+
+    print("\nStudent Name:", name)
+    print("Marks:", marks)
+    print("Grade:", grade)
+    print("-" * 20)
