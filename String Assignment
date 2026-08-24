@@ -1,0 +1,81 @@
+
+=====Basic String Analysis=====
+
+string=input("Enter The String:")
+print("Reverced String:",string[::-1])
+if string==string[ ::-1]:
+    print("Palindrome String")
+else:
+    print("No Palindrome:")
+
+
+
+=====String Reversal and Palindrome Check=====
+
+string=input("Enter a String:")
+vowels="awiou"
+count=0
+print("Lenth of String:",len(string))
+print("Total Number of Words:",string.split())
+print("Upper Case Character:",string.upper())
+print("Lower Case Character:",string.lower())
+for i in string:
+    if i in vowels:
+        count=count+1
+print("Finding Vowels and Count:",count)
+
+
+
+=====Find and Replace in Text======
+
+Mikasa=input("Input A Paragraph String:")
+word="Sandesh"
+replace_word="Sandy"
+
+print("How Many Times Target Repeat:", Mikasa.count(word))
+print("Finding First Occurrence:", Mikasa.find(word))
+print("Replaced Word:", Mikasa.replace(word,replace_word))
+
+
+
+
+=====String Formatting and Alignment=====
+
+Name=input("Enter Your Name:")
+age=int(input("Enter Your Age:"))
+City=input("Enter Your City:")
+
+print(f"Name Is {Name}")
+print(f"Age Is {age}")
+print(f"City Is {City}")
+print(f"Name {Name} age {age} and City is {City}")
+print(Name.ljust(30," "))
+print(Name.rjust(30," "))
+print(Name.center(30," "))
+
+
+
+=====Password Strength Checker=====
+
+password=input("Enter Your Password: ")
+
+special_char="@#$"
+upper=lower=digit=special=False
+
+for san in password:
+    if san.isupper():
+        upper=True
+    elif san.islower():
+        lower=True
+    elif san.isdigit():
+        digit=True
+    elif san in special_char:
+        special=True
+
+if len(password)>=8:
+    if upper and lower and digit and special:
+        print("Strong Password")
+    else:
+        print("Weak Password")
+else:
+    print("Weak Password")
