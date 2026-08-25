@@ -1,0 +1,76 @@
+
+=====Employee Information System=====
+
+class Employee:
+    def display_info(self):
+        print("Employee Id: 102")
+        print("Name: Sandesh ")
+        print("Department :IT")
+        print("Designation : Developer")
+        print("Salarry : 30000")
+        
+emp = Employee()
+emp.display_info()
+
+
+
+=====Bank Account Management=====
+
+class BankAccount:
+    def deposite(self,amount):
+        print(f"{amount} Deposite successfuly.")
+        
+    def check_balence(self):
+        print("Account Holder : Sandesh ")
+        print("Current Balence : 300000")
+        
+account = BankAccount()
+account.deposite(50000)
+account.check_balence()
+
+
+
+=====E-Commerce Product System=====
+
+class Product:
+    def display_product(self,pid,name,price):
+        print(f"Product ID:{pid}")
+        print(f"Product Name: {name}")
+        print(f"Price:{price}")
+
+Product1=Product()
+Product2=Product()
+
+Product1.display_product(201,"Laptop",55000)
+Product2.display_product(202,"Smartphone",25000)
+
+
+
+
+=====Library Book Management=====
+
+def book_details(self,title,author,pages):
+        print(f"Title  :{title}")
+        print(f"Author  :{author}")
+        print(f"Pages  :{pages}")
+        
+book=Book()
+book.book_details("Python Programming","Guido van Rossum",500)
+
+
+
+
+=====Hospital Patient Management=====
+
+class Patient:
+def       patient_details(self,name,age,disease):
+        print(f"Name  :{name}")
+        print(f"Age   :{age}")
+        print(f"Disease:{disease}")
+        
+    def prescription(self,disease):
+        print(f"Prescription rest and medication for{disease}.")
+               
+patient=Patient()
+patient.patient_details("Sandesh",30,"Typoid")
+patient.prescription("Typhoid")
