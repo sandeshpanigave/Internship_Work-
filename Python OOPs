@@ -1,0 +1,83 @@
+
+=====Simple Billing System=====
+
+class Simple_Billing:
+
+    def __init__(self, name, quantity, price):
+        self.name = name
+        self.quantity = quantity
+        self.price = price
+
+    def discount(self, total):
+        if total>=5000:
+            return total*20/100
+        elif total>=3000:
+            return total*15/100
+        elif total>=1000:
+            return total*10/100
+        else:
+            return 0
+
+    def details(self):
+        total= self.quantity* self.price
+        discount_amount= self.discount(total)
+        final_amount= total-discount_amount
+
+        print("=" * 40)
+        print("Name of Product:", self.name)
+        print("Quantity of Product:", self.quantity)
+        print("Price of Product:", self.price)
+        print("Total Bill:", total)
+        print("Discount:", discount_amount)
+        print("Final Amount:", final_amount)
+        print("=" * 40)
+        
+
+s1 = Simple_Billing("Sandesh", 2, 20)
+s2 = Simple_Billing("Mikasa", 4, 1000)
+
+s1.details()
+s2.details()
+
+
+
+
+======Employee Record System=====
+
+
+class Employee: 
+    def __init__(self,emp_id,name,department,base_salary):
+        self. emp_id=emp_id
+        self. name=name
+        self. department=department
+        self. base_salary=base_salary
+        
+    def apply_raise(self,percent):
+        self.base_salary= self.base_salary+ (self.base_salary* percent/ 100)
+        return self.base_salary
+        
+    def display_info(self):
+        print("="*40)
+        print("Enter Employee ID:",self.emp_id)
+        print("Enter The Employee Name:", self. name) 
+        print("Enter Employee Department:", self. department) 
+        print("Enter Employee Salary:", self. base_salary)
+        print("="*40)
+        
+    def __str__(self):
+        return f"Employee(Employee ID:{self.emp_id}, Employee Name:{self.name}, Employee Department{self.department}, Employee Salary{self.base_salary})"
+        
+emp1= Employee(101, "Sandy", "Engineering", 55000)
+emp2= Employee(102, "Sandesh", "Sales", 42000)
+emp3= Employee(108, "Mikasa", "Marketing", 38000)
+
+emp1.display_info()
+emp2.display_info()
+emp3.display_info()    
+
+print(f"Applying 10% raise to {emp1.name}...")
+new_salary= emp1.apply_raise(10)
+print(f"New Salary: {new_salary}")
+
+
+
