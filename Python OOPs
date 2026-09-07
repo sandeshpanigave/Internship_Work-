@@ -81,3 +81,97 @@ print(f"New Salary: {new_salary}")
 
 
 
+
+
+======Staff Hierarchy – Full-Time & Intern Payroll======
+
+class Staff:
+    def __init__(self, name, emp_id):
+        self.name=name
+        self.emp_id= emp_id
+
+    def calculate_pay(self):
+        return 0
+
+
+class FullTimeEmployee(Staff):
+    def __init__(self,name,emp_id,salary):
+        super().__init__(name,emp_id)
+        self.salary=salary
+
+    def calculate_pay(self):
+        return self.salary
+
+
+class InternStaff(Staff):
+    def __init__(self,name,emp_id,stipend,days):
+        super().__init__(name,emp_id)
+        self.stipend=stipend
+        self.days=days
+
+    def calculate_pay(self):
+        return self.stipend* self.days
+
+employee= FullTimeEmployee("Sandesh",101,50000)
+intern = InternStaff("Mikasa",102,500,20)
+
+staff= [employee, intern]
+
+for san in staff:
+    print(san.name, san.calculate_pay())
+
+
+
+
+======Invoice Total Calculator======
+
+class InvoiceCalculator:
+    def calculate_total(self,amount=None,tax_percent=0,discount_percent=0,items=None):
+        if items:
+            amount=sum(items)
+        if amount is None:
+            raise ValueError("Amount or items must be provided")
+
+        amount=amount-(amount*discount_percent/100)
+        amount=amount+(amount* tax_percent/100)
+        return amount
+
+san= InvoiceCalculator()
+print("Amount+ Tax:",san.calculate_total(1000,18))
+print("Amount+ Tax+ Discount:",san.calculate_total(1000,18,10))
+print("Items+ Tax:",san.calculate_total(items=[200, 300, 500], tax_percent=18))
+
+
+
+
+
+=====Notification Dispatcher=====
+
+
+class Notification:
+    def send (self, message):
+        print(" Sending Notification...")
+        
+    def urgent (self, message):
+        return False
+
+class Email_Notification (Notification):
+    def send (self, message):
+        print("[Email]",message)
+
+class Sms_Notification (Notification):
+    def send (self,message): 
+        print("[SMS]", message)
+
+class Push_Notification (Notification):
+    def send(self,message):
+        print("[Push]", message)
+        
+    def urgent (self, message):
+        return True
+
+san=[Email_Notification(),Sms_Notification(), Push_Notification()]
+for i in san:
+    message="You Got Message"
+    i.send("Sandesh")
+
