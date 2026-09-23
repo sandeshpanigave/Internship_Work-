@@ -13,7 +13,7 @@ print(san.max(arr))
 
 
 
-=====Finding Shape Data Type====
+=====Array vs List====
 
 import numpy as san
 a=san.array([1,2,3,4])
@@ -21,7 +21,7 @@ print(a.shape,a.dtype)
 print(a*2)
 
 
-=====Numpy Functions=====
+=====Shapes And Reshaping=====
 
 import numpy as np
 x=np.arange(12).reshape(3,4)
@@ -31,7 +31,7 @@ print(x.flatten())
 print(x.T)
 
 
-====Slicing=====
+====Slicing And Indexing=====
 
 import numpy as np
 x=np.arange(20).reshape(4,5)
@@ -42,7 +42,7 @@ print(x[1:3,1:3])
 print(x[x>10])
 
 
-=====Arithmetic Operation=====
+=====Broadcasting=====
 
 import numpy as np
 a=np.array([[1,2,3],[4,5,6]])
@@ -54,7 +54,7 @@ print(a/b)
 
 
 
-=====Axis In Numpy=====
+=====Aggregation And Axis=====
 
 import numpy as np
 x=np.arange(12).reshape(3,4)
